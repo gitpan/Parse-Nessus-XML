@@ -1,5 +1,5 @@
 NAME
-    Parse::Nessus::XML - Interface to Nessus XML reuslt files
+    Parse::Nessus::XML - Interface to Nessus XML result files
 
 SYNOPSIS
       use Parse::Nessus::XML
@@ -15,7 +15,10 @@ DESCRIPTION
     here, send me a patch.
 
     Please note that this API is just a suggestion, and is subject to change
-    in the first few releases.
+    in the first few releases. Because of how deeply nested the data
+    structure is, there's no particularly nice API to the whole thing - at
+    least that I can think of. See the example script in the example/
+    subdirectory to see how I use this in real life.
 
   new
       my $scan = Parse::Nessus::XML->new( $filename );
@@ -33,6 +36,11 @@ DESCRIPTION
       my $plugin = $scan->plugin(10964);
       $name = $plugin->name;
       $risk = $plugin->risk;
+
+  package Parse::Nessus::XML::Plugin
+    Supplementary package which facilitates figuring out what's in a
+    particular plugin. Also allows location of a plugin by ID number, which
+    speeds things up.
 
   Parse::Nessus::XML::Plugin->new
       my $plugin = Parse::Nessus::XML::Plugin->new( $scan, ID => 10964 );

@@ -3,13 +3,13 @@ use strict;
 use XML::Simple qw();
 
 use vars qw($VERSION);
-$VERSION = (qw($Revision: 1.12 $))[1];
+$VERSION = (qw($Revision: 1.13 $))[1];
 
 # Documentation {{{
 
 =head1 NAME
 
-Parse::Nessus::XML - Interface to Nessus XML reuslt files
+Parse::Nessus::XML - Interface to Nessus XML result files
 
 =head1 SYNOPSIS
 
