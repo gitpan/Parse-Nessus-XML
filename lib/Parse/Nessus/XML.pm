@@ -3,7 +3,7 @@ use strict;
 use XML::Simple qw();
 
 use vars qw($VERSION);
-$VERSION = (qw($Revision: 1.13 $))[1];
+$VERSION = (qw($Revision: 1.14 $))[1];
 
 # Documentation {{{
 
